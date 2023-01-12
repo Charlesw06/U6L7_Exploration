@@ -4,28 +4,28 @@ public class ArrayAlgorithmsTester
 {
     public static void main(String[] args)
     {
-        int[] nums = {1, 2, 3, 4, 5, 6};
-        ArrayAlgorithms.shiftNumRightModify(nums, 2);
+        int[] even = {1, 2, 3, 4, 5, 6};
+        ArrayAlgorithms.reverseModify(even);
 
-        // original array IS modified; all elements shifted left 2
-        System.out.println(Arrays.toString(nums));
+        // original array IS modified
+        System.out.println(Arrays.toString(even));
 
-        int[] sameNums = {1, 2, 3, 4, 5, 6};
-        ArrayAlgorithms.shiftNumRightModify(sameNums, 4);
+        int[] odd = {1, 2, 3, 4, 5};
+        ArrayAlgorithms.reverseModify(odd);
 
-        // original array IS modified; all elements shifted left 4
-        System.out.println(Arrays.toString(sameNums));
+        // original array IS modified
+        System.out.println(Arrays.toString(odd));
 
-        int[] moreNums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
-        ArrayAlgorithms.shiftNumRightModify(moreNums, 8);
+        int[] even2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+        ArrayAlgorithms.reverseModify(even2);
 
-        // original array IS modified; all elements shifted left 8
-        System.out.println(Arrays.toString(moreNums));
+        // original array IS modified
+        System.out.println(Arrays.toString(even2));
 
-        int[] moreNumsAgain = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
-        ArrayAlgorithms.shiftNumRightModify(moreNumsAgain, 10);
+        int[] odd2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+        ArrayAlgorithms.reverseModify(odd2);
 
-        // original array IS modified; all elements shifted left 10
-        System.out.println(Arrays.toString(moreNumsAgain));
+        // original array IS modified
+        System.out.println(Arrays.toString(odd2));
     }
 }

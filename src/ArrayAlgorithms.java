@@ -221,18 +221,41 @@ public class ArrayAlgorithms {
     public static void shiftNumRightModify(int[] numList, int shiftNum)
     {
         int[] tempArray = new int[shiftNum];
-        for (int i = numList.length-shiftNum-1; i < numList.length; i++) {
-            tempArray[i] = numList[i];
+        int tempI = 0;
+        for (int i = numList.length-shiftNum; i < numList.length; i++) {
+            tempArray[tempI] = numList[i];
+            tempI++;
         }
         int a = numList.length-1;
-        for (int i = numList.length-shiftNum-2; i > 0; i++) {
+        for (int i = numList.length-1-shiftNum; i >= 0; i--) {
             numList[a] = numList[i];
             a--;
         }
         int b = 0;
-        for (int i = 0; i < -1 * shiftNum - numList.length; i++) {
+        for (int i = 0; i < shiftNum; i++) {
             numList[i] = tempArray[b];
             b++;
+        }
+    }
+
+    public static int[] reverse(int[] numList)
+    {
+        int[] reversedArray = new int[numList.length];
+        int a = numList.length-1;
+        for (int i = 0; i < reversedArray.length; i++) {
+            reversedArray[i] = numList[a];
+            a--;
+        }
+        return reversedArray;
+    }
+
+    public static void reverseModify(int[] numList)
+    {
+        int temp;
+        for (int i = 0; i < numList.length/2; i++) {
+            temp = numList[i];
+            numList[i] = numList[numList.length-1-i];
+            numList[numList.length-1-i] = temp;
         }
     }
 }
